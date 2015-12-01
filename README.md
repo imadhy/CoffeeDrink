@@ -7,7 +7,7 @@ IN
 	// token de l'utilisateur
 	
 OUT
-	Response (JSON)
+	Response (JSON) //Reponse par le backend
 	{
 		"call" : "bonjour"
 		"answer" : {
@@ -16,11 +16,11 @@ OUT
 	}
 ```
 
++ L'utilisateur envoie un token
++ Le message est reçu en JSON
++ La response reçu par le backend est "[401] J'te connais pas va t'authentifier"
 
-
-
-
-
+<br />
 
 ```json
 POST http://www.coffeedrink.com/callback
@@ -37,3 +37,7 @@ OUT
 		}
 	}
 ```
+
++ L'utilisateur envoie le token reçu par le gestionnaire d'identification
++ Le message est reçu en JSON
++ La reponse reçu par le backend est "OK", il a reconnu le token envoyé par l'utilisateur
